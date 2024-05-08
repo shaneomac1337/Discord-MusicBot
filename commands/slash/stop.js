@@ -50,6 +50,11 @@ const command = new SlashCommand()
 					.setDescription(`:wave: | **Bye Bye!**`),
 			],
 		});
+        // Reset the bot's status to "Listening to Music"
+        client.user.setPresence({
+          activities: [{ name: 'Kvalitni Hudbu', type: 'LISTENING' }],
+          status: 'online'
+        });
 	});
 
 module.exports = command;
